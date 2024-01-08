@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const grades_1 = require("../controllers/grades");
+const GradeErrorHandler_1 = require("../middlewares/GradeErrorHandler");
+const gradeRouter = (0, express_1.Router)();
+gradeRouter.post('/', grades_1.addGrade);
+gradeRouter.get('/', grades_1.getGrades);
+gradeRouter.delete('/:id', grades_1.deleteGrade);
+gradeRouter.patch('/:id');
+gradeRouter.use(GradeErrorHandler_1.gradeErrorHanlder);
+exports.default = gradeRouter;
