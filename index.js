@@ -29,8 +29,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importStar(require("express"));
 const grades_1 = __importDefault(require("./routers/grades"));
 const GlobalErrorHandler_1 = require("./middlewares/GlobalErrorHandler");
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
+// import dotenv from 'dotenv'
+// dotenv.config()
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 // JSON Parser Middleware
